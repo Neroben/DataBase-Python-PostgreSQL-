@@ -1,0 +1,9 @@
+{% extends "database/view.html" %}
+
+{% block content2 %}
+<html>
+    <h1>Тренер<a href="{% url 'coachdelete' id=coach.coach_id %}" class="top-menu"><span class="glyphicon glyphicon-remove"></span></a></h1>
+    <p>Имя: {{ coach.name }} Фамилия: {{ coach.lastname }} Клуб: {{ coach.club.name }} </p>
+
+</html>
+{% endblock %}

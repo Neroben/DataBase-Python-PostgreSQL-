@@ -1,0 +1,8 @@
+{% extends "database/view.html" %}
+
+{% block content2 %}
+<html>
+    <h1>Игрок<a href="{% url 'playerdelete' id=player.player_id %}" class="top-menu"><span class="glyphicon glyphicon-remove"></span></a></h1>
+    <p>Имя: {{ player.name }} Фамилия: {{ player.lastname }} Клуб: {{ player.club.name }} Эффективность: {{ player.efficiency }} </p>
+</html>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    Таблицы:
+    <a href={{ url_for('confederacy') }}>Конфедерация</a>
+    <a href={{ url_for('club') }}>Клубы</a>
+    <a href={{ url_for('coach') }}>Тренера</a>
+    <a href={{ url_for('match') }}>Матчи</a>
+    <a href={{ url_for('players') }}>Игроки</a>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Создание клуба</h1>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name(size=32) }}<br>
+            {% for error in form.name.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.rating.label }}<br>
+            {{ form.rating(size=32) }}<br>
+            <span style="color: red;">{{ error2 }}</span>
+            {% for error in form.rating.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.confederacy_id.label }}<br>
+            {{ form.confederacy_id(size=32) }}<br>
+            {% for error in form.confederacy_id.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.sponsor_id.label }}<br>
+            {{ form.sponsor_id(size=32) }}<br>
+            {% for error in form.sponsor_id.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}

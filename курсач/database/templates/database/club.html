@@ -1,0 +1,8 @@
+{% extends "database/view.html" %}
+
+{% block content2 %}
+<html>
+    <h1>Клуб<a href="{% url 'clubdelete' id=club.club_id %}" class="top-menu"><span class="glyphicon glyphicon-remove"></span></a></h1>
+    <p>Название: {{ club.name }} Лига: {{ club.confederacy.name }} Рейтинг: {{ club.rating }} </p>
+</html>
+{% endblock %}

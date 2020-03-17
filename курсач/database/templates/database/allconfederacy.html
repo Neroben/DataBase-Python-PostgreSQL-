@@ -1,0 +1,14 @@
+{% extends "database/view.html" %}
+
+{% block content2 %}
+<html>
+    {{reserv}}
+    <table>
+        <tr><th><a>ID</a></th><th><a>Название</a></th></tr>
+    {% for confederacy in confederacys %}
+        <tr><th><a href="{% url 'confederacy' pk=confederacy.confederacy_id %}">{{ confederacy.confederacy_id }}</a></th><th>{{ confederacy.name }}</th><th><a href="{% url 'confederacyreservation' id=confederacy.confederacy_id %}">Зарезервировать</a></th></tr>
+    {% endfor %}
+    </table>
+    <a href="{% url 'confederacy_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+</html>
+{% endblock %}

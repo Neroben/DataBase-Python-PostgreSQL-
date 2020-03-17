@@ -1,0 +1,10 @@
+{% extends 'database/base.html' %}
+
+{% block content %}
+    <h1>Новый клуб</h1>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ error }}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Сохранить</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "database/view.html" %}
+
+{% block content2 %}
+<html>
+    <table>
+    <tr><th><a href="#">ID</a></th><th><a href="#">Дата</a></th><th><a href="#">Клуб</a></th><th><a href="#">Счёт</a></th><th><a href="#">Клуб</a></th><th><a href="#">Счёт</a></th><th><a href="#">Продажи</a></th>
+    {% for match in matchs %}
+        <tr><th><a href="{% url 'match' pk=match.match_id %}">{{ match.match_id }}</a></th><th>{{ match.playdata }}</th><th>{{ match.club_id1.name }}</th><th>{{ match.count1 }}</th><th>{{ match.club_id2.name }}</th><th>{{ match.count2 }}</th><th>{{ match.sold }}</th></tr>
+    {% endfor %}
+    </table>
+    <a href="{% url 'match_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+</html>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    Создать элемент в таблице:
+    <a href={{ url_for('createconfederacy') }}>Конфедерация</a>
+    <a href={{ url_for('createclub') }}>Клуб</a>
+</div>
+{% endblock %}

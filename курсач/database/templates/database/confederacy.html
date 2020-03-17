@@ -1,0 +1,8 @@
+{% extends "database/view.html" %}
+
+{% block content2 %}
+<html>
+    <h1>Конфедерация<a href="{% url 'confederacydelete' id=confederacy.confederacy_id %}" class="top-menu"><span class="glyphicon glyphicon-remove"></span></a></h1>
+    <p>Название: {{ confederacy.name }}</p>
+</html>
+{% endblock %}

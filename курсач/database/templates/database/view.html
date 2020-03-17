@@ -1,0 +1,17 @@
+{% extends "database/base.html" %}
+
+{% block content %}
+<html>
+    <div>
+        Таблицы:
+        <a href={{ '/allconfederacy' }}>Конфедерации</a>
+        <a href={{ '/allsponsor' }}>Спонсоры</a>
+        <a href={{ '/allcoach' }}>Тренеры</a>
+        <a href={{ '/allclub' }}>Клубы</a>
+        <a href={{ '/allmatch' }}>Матчи</a>
+        <a href={{ '/allplayer' }}>Игроки</a>
+    </div>
+    {% block content2 %}
+    {% endblock %}
+</html>
+{% endblock %}

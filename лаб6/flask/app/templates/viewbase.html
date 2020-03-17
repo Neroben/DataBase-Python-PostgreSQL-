@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<table>
+<tr><th>Данные</th></tr> <!--ряд с ячейками заголовков-->
+{% for liga in ligs%}
+<tr><td>{{ liga }}</td></tr> <!--ряд с ячейками тела таблицы-->
+{% endfor %}
+</table>
+
+{% endblock %}

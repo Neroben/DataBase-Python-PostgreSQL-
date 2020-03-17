@@ -1,0 +1,28 @@
+<html>
+    <head>
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Database</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>
+            Databases:
+            <a href={{ url_for('index') }}>Главная</a>
+            <a href={{ url_for('insert') }}>Добавление</a>
+            <a href={{ url_for('view') }}>Просмотр</a>
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </body>
+</html>

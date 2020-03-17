@@ -1,0 +1,12 @@
+{% extends "database/view.html" %}
+
+{% block content2 %}
+<html>
+    <table>
+    <tr><th><a href="#">ID</a></th><th><a href="#">Имя</a></th><th><a href="#">Фамилия</a></th><th><a href="#">Клуб</a></th></tr>
+    {% for coach in coachs %}
+        <tr><th>{{ coach.coach_id }}</th><th>{{ coach.name }}</th><th>{{ coach.lastname }}</th><th>{{ coach.club.name }}</th></tr>
+    {% endfor %}
+    </table>
+</html>
+{% endblock %}

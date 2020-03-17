@@ -1,0 +1,12 @@
+{% extends "database/view.html" %}
+
+{% block content2 %}
+<html>
+    <table>
+    <tr><th><a>Название</a></th><th><a>Рейтинг</a></th><th><a>Конфедерация</a></th><th><a>Спонсор</a></th></tr>
+    {% for club in clubs %}
+        <tr><th>{{ club.name }}</th><th>{{ club.rating }}</th><th>{{ club.confederacy.name }}</th><th>{{ club.sponsor.name }}</th></tr>
+    {% endfor %}
+    </table>
+</html>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "database/view.html" %}
+
+{% block content2 %}
+<html>
+    <table>
+    <tr><th><a href="#">ID</a></th><th><a href="#">Имя</a></th><th><a href="#">Фамилия</a></th><th><a href="#">Клуб</a></th></tr>
+    {% for player in players %}
+        <tr><th><a href="{% url 'player' pk=player.player_id %}">{{ player.player_id }}</a></th><th>{{ player.name }}</th><th>{{ player.lastname }}</th><th>{{ player.club.name }}</th></tr>
+    {% endfor %}
+    </table>
+    <a href="{% url 'player_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+</html>
+{% endblock %}

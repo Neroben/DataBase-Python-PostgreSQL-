@@ -1,0 +1,8 @@
+{% extends "database/view.html" %}
+
+{% block content2 %}
+<html>
+    <h1>Матч<a href="{% url 'matchdelete' id=match.match_id %}" class="top-menu"><span class="glyphicon glyphicon-remove"></span></a></h1>
+    <p>Дата: {{ match.playdata }} Первая команда: {{ match.club_id1.name }} Счет: {{ match.count1 }} Вторая команда: {{ match.club_id1.name }} Счет: {{ match.count1 }} </p>
+</html>
+{% endblock %}
